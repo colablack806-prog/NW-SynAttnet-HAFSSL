@@ -4,13 +4,7 @@
 # ║  Environment : Kaggle                                                   ║
 # ║  Dataset     : ISCX 5-Class (chat / email / file / streaming / voip)   ║
 # ║  Clients     : 10                                                       ║
-# ║                                                                          ║
-# ║  CHANGES vs HAFSSL v3 (FedNova):                                       ║
-# ║  1. FedNova → MOON  (model-level contrastive loss in local training)   ║
-# ║  2. FedAvg  used for aggregation (MOON novelty is in local training)   ║
-# ║  3. MOON hyper-params: μ=5.0, temperature τ=0.5                        ║
-# ║  4. Previous local model stored per client for contrastive learning     ║
-# ║  5. Contrastive loss tracked and visualised per round                   ║
+# ║                                                                                           ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -88,10 +82,10 @@ plt.rcParams.update({
 # ═════════════════════════════════════════════════════════════════════════════
 LABELS = ['chat', 'email', 'file', 'streaming', 'voip']
 
-KAGGLE_USERNAME    = 'nesaarrahmani'
+KAGGLE_USERNAME    = 'xxxxxx'
 CHECKPOINT_DATASET = 'moon-hafssl-cheeckpoint'
 DATASET_PATH       = (
-    '/kaggle/input/datasets/nesaarrahmani/iscx-benchmark/ISCX_5class_each_normalized_cuttedfloefeature.csv'
+    '/kaggle/input/datasets/xxxxxx/iscx-benchmark/ISCX_5class_each_normalized_cuttedfloefeature.csv'
 )
 
 CHECKPOINT_INPUT   = (
