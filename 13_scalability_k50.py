@@ -103,8 +103,6 @@ WORKING_BASE     = f'/kaggle/working/{_folder_name}'
 FIGURE_DIR       = f'{WORKING_BASE}/result/figures'
 AEmodelLocation  = f'{WORKING_BASE}/Models/{MODEL_NAME}_AE_{numOfClients}_nodes.keras'
 CNNmodelLocation = f'{WORKING_BASE}/Models/{MODEL_NAME}_CNN_{numOfClients}_nodes.keras'
-# Directory name retained for checkpoint compatibility — it stores HAFSSL client
-# models, not the FL-AECNN baseline. See the note in README.md.
 CLIENT_MODEL_DIR = f'{WORKING_BASE}/Models/AECNNmodel'
 CHECKPOINT_FILE  = f'{WORKING_BASE}/checkpoint.json'
 CONVERGENCE_CSV  = f'{WORKING_BASE}/result/{MODEL_NAME}_convergence.csv'
