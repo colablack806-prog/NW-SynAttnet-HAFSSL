@@ -59,10 +59,10 @@ plt.rcParams.update({
 LABELS = ['chat', 'email', 'file', 'streaming', 'voip']
 
 # ── Kaggle paths ──────────────────────────────────────────────────────────
-KAGGLE_USERNAME    = 'ahmadnesarrahmani'
+KAGGLE_USERNAME    = 'xxxxxxxx'
 CHECKPOINT_DATASET = 'checkpoints-500-fedprox-hafssl'
 DATASET_PATH       = (
-    '/kaggle/input/datasets/ahmadnesarrahmani/'
+    '/kaggle/input/datasets/xxxxxxx/'
     'aaaaaaaa/ISCX_5class_each_normalized_cuttedfloefeature.csv'
 )
 
