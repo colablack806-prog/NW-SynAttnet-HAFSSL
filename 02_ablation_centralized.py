@@ -146,7 +146,7 @@ def build_synattnnet_classifier(latent_dim, s_shape, n_classes):
 def prepare_data_and_models():
     # Mount Google Drive and load data
     drive.mount('/content/drive')
-    root_path = '/content/drive/My Drive/'
+    root_path = '/content/My Drive/'
     dfDS = pd.read_csv(root_path + 'ISCX_5class_each_normalized_cuttedfloefeature.csv')
 
     # Prepare data
