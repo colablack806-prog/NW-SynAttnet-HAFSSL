@@ -69,8 +69,8 @@ Scripts differ in more than the variable under study. The table below records wh
 
 | Script | Dataset | K | α | Labels/client | Epochs | Rounds | Attn. in encoder | Attn. in head | Stage 1.5 | Aggregation |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `03_` | ISCX 5 | 10 | IID | varies | 5 | 50 | yes | no | yes | unweighted mean |
-| `04_` | ISCX 5 | 10 | 0.5 | varies | 5 | 50 | yes | no | yes | unweighted mean |
+| `03_` | ISCX 5 | 10 | IID | varies | 5 | 50 | yes | no | yes | weighted (n_k/n|
+| `04_` | ISCX 5 | 10 | 0.5 | varies | 5 | 50 | yes | no | yes | weighted (n_k/n |
 | `13_` | ISCX 5 | 50 | 0.5 | 500 | 5 | 50 | yes | yes | yes | weighted (n_k/n) |
 | `14_` | ISCX 5 | 10 | 0.01 | 1000 | 3 | 100 | yes | yes | yes | weighted (n_k/n) |
 | `15_` | USTC 20 | 10 | 0.5 | 2000 | 5 | 50 | yes | no | yes | weighted (n_k/n) |
@@ -94,7 +94,7 @@ There is no separate script for Table X. Every row was produced by running `01_c
 | `SE_RATIO` | r | 4, 8, 16 | 16 |
 | `labelnum` | Labels | 500, 1000, 4000 | — |
 
-That is 3 × 3 × 3 = 27 attention configurations per label regime, 81 runs in total. Table X reports only four rows per regime (best, 2nd best, worst, 2nd worst); the complete 81-row grid is in `results/sensitivity_table10.csv`.
+That is 3 × 3 × 3 = 27 attention configurations per label regime, 81 runs in total. Table X reports only four rows per regime (best, 2nd best, worst, 2nd worst).
 
 **Held fixed across all 81 runs:** key dimension 32, dropout, Adam optimizer, batch size, epochs per stage, the attention ordering (MHA then SE), the random seed, and the same ISCX 5-class CSV with the same train/test split. Only the four values above vary, so any difference in accuracy is attributable to them.
 
@@ -246,19 +246,6 @@ FL-AECNN, the federated baseline compared against HAFSSL in Tables V–IX, follo
 ## Status
 
 **Included:** centralized experiments (Tables II, III); federated IID and non-IID comparisons (Tables V, VI); the four-variant federated attention ablation (Table IV); the four-aggregator comparison (Table VII); scalability and extreme heterogeneity (Table VIII); the USTC-TFC2016 cross-dataset evaluation (Table IX); the sensitivity grid recipe (Table X).
-
-**Still to be added:**
-
-| Item | Covers |
-|---|---|
-| `16_efficiency.py` | Table XI, Appendix A — parameter counts, communication per round, inference latency |
-| `17_failure_analysis.py` | Appendix C — MOON VoIP collapse, α = 0.01 degenerate pattern, WhatsApp/Snapchat confusion |
-| `18_make_figures.py` | Figs. 4, 5 — per-class precision / recall / F1 bar charts |
-| `ustc_preprocess.py` | USTC-TFC2016 payload extraction and split, currently undocumented |
-| `results/sensitivity_table10.csv` | the full 81-run grid behind Table X |
-| `requirements.txt` | pinned dependencies (`pip freeze`); the TensorFlow version affects reproducibility |
-| `.gitignore` | keeps `.keras`, `.h5`, data CSVs and `__pycache__` out of the repository |
-| `LICENSE` | MIT or the institution's preferred licence |
 
 Table XII (Appendix B) is a consolidation of results already reported in Tables V–IX rather than a separate experiment, and is assembled from the `*_final_summary.csv` files.
 
