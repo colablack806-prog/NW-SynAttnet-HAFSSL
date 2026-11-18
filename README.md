@@ -16,8 +16,9 @@ Each results zip holds the saved outputs of its runs: `results/all_runs.csv` (on
 pip install -r requirements.txt
 unzip data/ISCX-VPN2016.zip  -d data/ISCX-VPN2016
 unzip data/10PopularApps.zip -d data/10PopularApps
+unzip data/USTC-TFC2016.zip  -d data/USTC-TFC2016
 ```
-For USTC-TFC2016, see `data/DATA_SOURCES.md`.
+`data/DATA_SOURCES.md` gives the source and contents of each dataset.
 
 Run every command from the repository root. The scripts were run on Kaggle (NVIDIA Tesla T4) and write to `/kaggle/working` by default; set `OUT_DIR` (or `OUT_ROOT`, `BASE`) at the top of a script to write elsewhere. All settings are constants at the top of each script, with the values of the reported runs. `QUICK_TEST = True` runs a short check of the pipeline.
 
@@ -47,7 +48,7 @@ Five forms (MHA->SE, SE->MHA, MHA only, SE only, no block) x 4 label budgets x 3
 python experiments/T05_federated_ablation/federated_ablation_R2.py   # 12 runs -> outputs/FED_ISCX_ablation
 python experiments/T05_federated_ablation/table5_analysis.py         # Table V, paired tests and lost classes
 ```
-Results: `ablation_TF2.21.zip` (the 12 runs of Table V; `unzip ablation_TF2.21.zip -d outputs` and run `table5_analysis.py` to recompute the table) and `earlier_run_TF2.20.zip` (the earlier run of the three alternative forms with TensorFlow 2.20, discussed in Section V-D).
+Results: `ablation_TF2.21.zip` (the 12 runs of Table V; `unzip experiments/T05_federated_ablation/results/ablation_TF2.21.zip -d outputs` and run `table5_analysis.py` to recompute the table) and `earlier_run_TF2.20.zip` (the earlier run of the three alternative forms with TensorFlow 2.20, discussed in Section V-D).
 
 ### Table VI: federated baselines
 ```
