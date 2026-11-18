@@ -1,0 +1,8 @@
+# TensorFlow version of each run: tf_version column of results/all_runs.csv (2.20.0 or 2.21.0)
+tensorflow>=2.20,<2.22
+numpy
+pandas
+scikit-learn
+scipy
+# Section V-B (ET-BERT) only
+torch
