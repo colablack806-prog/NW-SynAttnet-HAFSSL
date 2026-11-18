@@ -2,7 +2,7 @@
 """
 HAFSSL / FL-AECNN - extreme heterogeneity (Dirichlet alpha = 0.01, K = 10), R2 revision.
 THIS COPY: 10 POPULAR APPS (second dataset for Tables VIII and IX), MODEL = "HAFSSL".
-Same protocol and same code as the ISCX alpha = 0.01 runs (fed_iscx_alpha001_HAFSSL_standard.py);
+Same protocol and same code as the ISCX alpha = 0.01 runs (this script with DATASET = "ISCX");
 only the data path, the labels and the size checks differ. Run the HAFSSL copy and the FL-AECNN copy
 in two notebooks: for each seed they get exactly the same client partition and labeled flows.
 

@@ -69,7 +69,7 @@ python experiments/T08_T09_extreme_heterogeneity/04_federated_alpha001.py       
 python experiments/T08_T09_extreme_heterogeneity/04b_federated_alpha001_HAFSSL-CA_ISCX.py   # HAFSSL-CA, ISCX-VPN2016
 python experiments/T08_T09_extreme_heterogeneity/04c_federated_alpha001_HAFSSL-CA_Apps10.py # HAFSSL-CA, 10 Popular Apps
 ```
-`04_federated_alpha001.py` is set for 10 Popular Apps; the ISCX-VPN2016 runs used the same code with `DATASET = "ISCX"`, the ISCX data path and labels. In `04b`, `MODEL = "HAFSSL"` is HAFSSL-CA (hybrid attention also in the classifier head, key dimension 16, head dropout 0.3; 461,013 parameters), which is why its output folder is named `..._HAFSSL`.
+`04_federated_alpha001.py` gives the FL-AECNN and HAFSSL runs (set `MODEL`). It is saved with the settings of the 10 Popular Apps runs; for the ISCX-VPN2016 runs, set `DATASET = "ISCX"`, the ISCX data path and labels. In `04b`, `MODEL = "HAFSSL"` is HAFSSL-CA (hybrid attention also in the classifier head, key dimension 16, head dropout 0.3; 461,013 parameters), which is why its output folder is named `..._HAFSSL`.
 Results: `ISCX_FL-AECNN.zip`, `ISCX_HAFSSL.zip`, `ISCX_HAFSSL-CA.zip`, `Apps10_FL-AECNN_HAFSSL_HAFSSL-CA.zip` (HAFSSL-CA is the `clfatt` folder).
 
 ### Table X: other datasets and IID control
